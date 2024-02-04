@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const HeaderCotainer = styled.header`
 position: fixed;
 width: 100%;
-
+top: 0;
+background-color: #121214;
+z-index: 999;
 `;
 
 export const HeaderContent = styled.div`
@@ -23,6 +25,16 @@ justify-content: space-between;
     display: flex;
     align-items: center;
     gap: 2rem;
+    
+    a{
+      text-decoration: none;
+      color: #FFF;  
+      transition: .3s;
+      
+      &:hover{
+        color: #FFA634;
+      }
+    }
 
     p{
       cursor: pointer;
@@ -46,9 +58,6 @@ justify-content: space-between;
 
 @media (max-width: 550px){
   p{
-    display: none;
-  }
-  .search-icon{
     display: none;
   }
 }
