@@ -1,6 +1,7 @@
 import { HeaderCotainer, HeaderContent } from "./Style";
-import { FaSearch, FaRegUser } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
 import { MdNotificationsActive } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Header = () =>{
   return(
@@ -8,8 +9,7 @@ const Header = () =>{
       <HeaderContent>
         <h1>Kenai</h1>
         <div className="header-nav">
-          <FaSearch className="search-icon icon" />
-          <p>Início</p>
+          <Link to="/kenai">Início</Link>
           <p>Minha lista</p>
           <FaRegUser className="user-icon icon" />
           <MdNotificationsActive className="not-icon icon" />
