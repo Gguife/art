@@ -4,7 +4,6 @@ export const HeaderCotainer = styled.header`
 position: fixed;
 width: 100%;
 top: 0;
-background-color: #121214;
 z-index: 999;
 `;
 
