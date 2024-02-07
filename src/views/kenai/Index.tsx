@@ -3,6 +3,7 @@ import Header from "../../components/header/Index";
 import CardMain from "../../components/cardMainKenai/Index";
 import { KenaiContainer, KenaiMoviesCard } from "./Style";
 import { MovieService } from "../../api/api";
+import { ThreeCircles } from 'react-loader-spinner'
 
 interface Movie {
   id: number
@@ -10,6 +11,7 @@ interface Movie {
 
 const Kenai = () =>{
   const [movies, setMovies] = useState<Movie[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const getMovies = async () =>{
     try{
@@ -17,6 +19,8 @@ const Kenai = () =>{
       setMovies(results); 
     }catch(error){
       console.error("Erro ao obter filmes:", error);
+    }finally{
+      setLoading(false);
     }
   }
 
@@ -25,16 +29,34 @@ const Kenai = () =>{
   }, [])
 
   return(
-    <KenaiContainer>
-      <Header />
-      <KenaiMoviesCard>
-        {movies.map((movie) => (
-          <div key={movie.id}>
-            <CardMain movieProp={movie} />
+    <>
+      {loading ? (
+        // Se o loading for verdadeiro, exiba a mensagem "Carregando..."
+        <div className="spinner">  
+          <ThreeCircles
+            visible={true}
+            height="100"
+            width="100"
+            color="#FFA634"
+            ariaLabel="three-circles-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            />
           </div>
-        ))}
-      </KenaiMoviesCard>
-    </KenaiContainer>
+      ) : (
+        // Caso contrário, exiba os filmes
+        <KenaiContainer>
+          <Header />
+          <KenaiMoviesCard>
+            {movies.map((movie) => (
+              <div key={movie.id}>
+                <CardMain movieProp={movie} />
+              </div>
+            ))}
+          </KenaiMoviesCard>
+        </KenaiContainer>
+      )}
+    </>
   )
 }
 
