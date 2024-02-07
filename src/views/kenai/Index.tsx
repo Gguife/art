@@ -6,7 +6,9 @@ import { MovieService } from "../../api/api";
 import { ThreeCircles } from 'react-loader-spinner'
 
 interface Movie {
-  id: number
+  id: number,
+  title: string,
+  poster_path: string
 }
 
 const Kenai = () =>{
