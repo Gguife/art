@@ -31,7 +31,6 @@ const Kenai = () =>{
   return(
     <>
       {loading ? (
-        // Se o loading for verdadeiro, exiba a mensagem "Carregando..."
         <div className="spinner">  
           <ThreeCircles
             visible={true}
