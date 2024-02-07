@@ -22,6 +22,13 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 10px;
     background-color: #FFA634;
   }
+
+  .spinner{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export default GlobalStyle;
