@@ -7,7 +7,7 @@
 
 - [x] Site totalmente responsivo e intuitivo.
 - [x] Os principais filmes em cartaz e infromações sobre cada um desses filmes.
-- [x] Um simulador de um serviço de stream.
+- [x] Utilizando API de filmes do TMDB.
 
 ## Layout 🎨
 <h1 align="center">
