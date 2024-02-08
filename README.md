@@ -11,7 +11,7 @@
 
 ## Layout 🎨
 <h1 align="center">
-  <img alt="Kenai" title="Kenai" src="" width='90%' />
+  <img alt="Kenai" title="Kenai" src="./public/kenai-gif.gif" width='90%' />
   <a href="https://kenai-murex.vercel.app/">Kenai 🌐</a>
 </h1>
 
